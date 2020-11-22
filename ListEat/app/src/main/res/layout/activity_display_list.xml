@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisplayListActivity">
+
+    <TextView
+        android:id="@+id/textViewDisplayedListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#12B034"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_cancel"
+        android:onClick="cancelTheAction" />
+
+
+    <ListView
+                        android:id="@+id/listViewContentList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDisplayedListTitle"
+                        android:layout_above="@+id/buttonEditList"
+                        android:layout_marginTop="25dp"
+                        />
+
+                    <Button
+                        android:id="@+id/buttonShowCaddie"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:background="@drawable/button_show_caddie"
+                        android:layout_margin="10dp"
+                        android:onClick="showCaddie" />
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/textViewCaddieLabel"
+                        android:layout_margin="5dp"
+                        android:layout_below="@+id/textViewDisplayedListTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        />
+
+                    <ListView
+                        android:id="@+id/listViewContentCaddie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/buttonEditList"
+                        android:layout_below="@+id/textViewCaddieLabel"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:visibility="invisible"
+                        android:id="@+id/buttonShowList"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:background="@drawable/button_show_list"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:paddingTop="-10dp"
+                        android:onClick="showList" />
+
+    <Button
+        android:id="@+id/buttonSaveList"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_save"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/buttonEditList"
+        android:layout_margin="10dp"
+        android:onClick="saveChanges"
+        style="?android:attr/borderlessButtonStyle"
+        />
+    <Button
+        android:id="@+id/buttonEditList"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_edit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:onClick="addOrEditListFromDisplayList"
+        style="?android:attr/borderlessButtonStyle"
+        />
+</RelativeLayout>

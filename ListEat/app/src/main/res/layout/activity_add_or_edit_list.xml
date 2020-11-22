@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddOrEditListActivity">
+
+    <EditText
+        android:id="@+id/editTextTitleInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#12B034"
+        android:contentDescription="A new list name is required."
+        android:gravity="center"
+        android:hint="Your title here."
+        android:maxLength="14"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/editTextInputResearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextTitleInput"
+        android:hint="Your research here."
+        android:gravity="center"
+        android:inputType="text"
+        android:layout_toLeftOf="@+id/buttonSearch"
+        android:maxLength="20"
+        />
+
+    <Button
+        android:layout_marginRight="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/ic_menu_search"
+        android:layout_alignParentRight="true"
+        android:id="@+id/buttonSearch"
+        android:layout_below="@+id/editTextTitleInput"
+        android:onClick="dotheResearch"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/editTextInputResearch"
+        android:layout_above="@+id/buttonSaveList">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:id="@+id/resultsReseach"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#75000000" />
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/contentList"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_cancel"
+        android:onClick="cancelTheAction" />
+
+    <Button
+        android:id="@+id/buttonSaveList"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_save"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="addNewListOrEditList"
+        style="?android:attr/borderlessButtonStyle"
+        />
+</RelativeLayout>
